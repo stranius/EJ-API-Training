@@ -1,0 +1,42 @@
+[
+    {
+        "firstName": "adam",
+        "lastName": "Wright",
+        "email": "wwebeltpenis2000@yahoo.com",
+        "dateOfBirth": "06,20,2000",
+        "address": { 
+            "street": "205 fuck me street",
+            "city": "Montero",
+            "country": "USA",
+            "state": "TX",
+            "zipcode": "66645"
+        },
+        "addressBilling": {
+            "street": "1704 Progress Ln",
+            "city": "Belleville",
+            "country": "USA",
+            "state": "IL",
+            "zipcode": "62221"
+        }
+    },
+    {
+        "firstName": "Ryan",
+        "lastName": "Mustang",
+        "email": "ladysmanmustang@gmail.com",
+        "dateOfBirth": "09,11,1996",
+        "address": { 
+            "street": "205 simp street",
+            "city": "Montero",
+            "country": "USA",
+            "state": "TX",
+            "zipcode": "66644"
+        },
+        "addressBilling": {
+            "street": "205 fuck me street",
+            "city": "Montero",
+            "country": "USA",
+            "state": "TX",
+            "zipcode": "66645"
+        }
+    }
+]

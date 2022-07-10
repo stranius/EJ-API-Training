@@ -2,9 +2,10 @@
 const userData = require("../seedData/users.json")
 const fs = require('fs');
 
-const email = 'Payton@gmail.com'
+const id = '_id":"62cb463eca23f74c52e74663'
 const data = {
-    firstName: "Payton",
+    _id: "62cb463eca23f74c52e74663",
+        firstName: "Payton",
         lastName: "Fisher",
         email: "Payton@gmail.com",
         dateOfBirth: "12,23,1998",
@@ -30,8 +31,8 @@ function getAllUsers() {
 
 var response = getAllUsers();
 
-function getUser(email) {
-    return userData.find(user => email == user.email);
+function getUser(id) {
+    return userData.find(user => id == user._id);
     
 }
 
@@ -41,4 +42,6 @@ function createUser(newUser) {
     fs.writeFile(__dirname + '/../seedData/users.json', json , () => null );
     return newUser;
 }
+getUser(id);
+console.log(id);
 

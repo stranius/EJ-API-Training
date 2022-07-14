@@ -1,0 +1,22 @@
+{
+  "name": "ej-api-training",
+  "version": "1.0.0",
+  "description": "Teaching my buddy EJ how to build API's and use repositories and boards in a real-world-like environment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stranius/EJ-API-Training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stranius/EJ-API-Training/issues"
+  },
+  "homepage": "https://github.com/stranius/EJ-API-Training#readme",
+  "dependencies": {
+    "mongodb": "^4.7.0"
+  }
+}

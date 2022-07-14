@@ -1,14 +1,14 @@
 // import userData from "../seedData/users.json"
 const userData = require("../seedData/users.json")
 const fs = require('fs');
+const ObjectId = require('mongodb').ObjectId
 
 const id = '_id":"62cb463eca23f74c52e74663'
 const data = {
-    _id: "62cb463eca23f74c52e74663",
-        firstName: "Payton",
+        firstName: "Kurtis",
         lastName: "Fisher",
-        email: "Payton@gmail.com",
-        dateOfBirth: "12,23,1998",
+        email: "BigHog2002@gmail.com",
+        dateOfBirth: "04,15,2002",
         address: { 
             street: "1816 woodrow Ave",
             city: "Wichita Falls",
@@ -17,11 +17,11 @@ const data = {
             zipcode: "76308"
         },
         addressBilling: {
-            street: "6 gerold ln.",
-            city: "Belleville",
+            street: "5005 lake park dr.",
+            city: "Wichita Falls",
             country: "USA",
-            state: "IL",
-            zipcode: "62223"
+            state: "TX",
+            zipcode: "76308"
         }
 }
 
@@ -37,11 +37,16 @@ function getUser(id) {
 }
 
 function createUser(newUser) {
-    userData.push(newUser);
-    const json = JSON.stringify(userData);
-    fs.writeFile(__dirname + '/../seedData/users.json', json , () => null );
-    return newUser;
+    var findUser = userData.find(user => newUser.email == user.email);
+    if(findUser === undefined){
+        const objectId = new ObjectId();
+        newUser._id = objectId;
+        userData.push(newUser);
+        const json = JSON.stringify(userData);
+        fs.writeFile(__dirname + '/../seedData/users.json', json , () => null );
+        return newUser;
+    } else {
+        console.log("user already exist");
+        return;
+    }
 }
-getUser(id);
-console.log(id);
-
